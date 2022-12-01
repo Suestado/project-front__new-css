@@ -1,31 +1,48 @@
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
     <title>RPG</title>
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
-    <script type='text/javascript' src = '/html/getRequests.js'> </script>
     <link href="/css/my.css" rel="stylesheet" media="all">
 </head>
 
 <body>
 
 <h1>RPG admin panel</h1>
+<div id='table'>
+    <table id='userTable'>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Race</th>
+            <th>Profession</th>
+            <th>Level</th>
+            <th>Birthday</th>
+            <th>Banned</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+</div>
+<br>
+<div id='selector'>
+    <label for="accountsToBeShown">Number of accounts to be shown on page: </label>
+    <select id='accountsToBeShown'>
+        <option value='0'>3</option>
+        <option value='1'>5</option>
+        <option value='2'>10</option>
+        <option value='3'>20</option>
+    </select>
+</div>
+<br>
+<div id='paging'>
+    Pages:
+</div>
 
-<table id='userTable'>
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Title</th>
-        <th>Race</th>
-        <th>Profession</th>
-        <th>Level</th>
-        <th>Birthday</th>
-        <th>Banned</th>
-    </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
+<script type='text/javascript' src = '/html/getRequests.js'> </script>
 
 </body>
 </html>
