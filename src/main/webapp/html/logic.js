@@ -132,6 +132,22 @@ function makeSelect(cell, elements) {
     cell.outerHTML = select
 }
 
+function cleanInputs(form) {
+    for (let i = 0; i < form.length; i++) {
+        const node = form[i]
+        const prop = node.labels[0].id
+        if (prop !== 'birthday') {
+            if (node.nodeName === 'INPUT') {
+                node.value = ''
+            } else if (node.nodeName === 'SELECT') {
+                node.selectedIndex = 0
+            }
+        } else {
+            node.value = new Date()
+        }
+    }
+}
+
 (async () => {
 
     async function renderPage(pageSize, pageNumber) {
@@ -260,6 +276,7 @@ function makeSelect(cell, elements) {
         await createUser(usersLink, newUser)
         const pageSize = await getPageSize()
         await renderPage(pageSize)
+        await cleanInputs(form);
     })
 
 })()
