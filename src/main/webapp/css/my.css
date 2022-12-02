@@ -1,47 +1,136 @@
+
+.title {
+    margin:     20px auto 20px;
+    text-align: center;
+    }
+
+.characters {
+    max-width:       1440px;
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: space-between;
+    margin:          0 auto;
+    }
+
+.characters__page {
+    width:        1100px;
+    margin-right: 50px;
+    }
+
 table {
-    border: 1px solid grey
-}
+    border:          1px solid grey;
+    border-spacing:  0;
+    border-collapse: collapse;
+    table-layout:    fixed;
+    width:           100%;
+    }
 
 td, th {
-    border: 1px solid grey;
-    padding: 3px;
-}
+    border:    1px solid grey;
+    padding:   3px;
+    word-wrap: break-word;
+    }
 
 .editableText {
     background-color: lavender;
-}
+    }
+
+.table-id {
+    width: 30px;
+    }
+
+.table-name {
+    width: 180px;
+    }
+
+.table-title {
+    width: 230px;
+    }
+
+.table-race {
+    width: 120px;
+    }
+
+.table-profession {
+    width: 120px;
+    }
+
+.table-level {
+    width: 45px;
+    }
+
+.table-birthday {
+    width: 120px;
+    }
+
+.table-banned,
+.table-edit,
+.table-delete {
+    width: 70px;
+    }
+
+.new-player__subtitle {
+    padding: 0;
+    margin:  40px 0 20px;
+    }
+
+.new-player {
+    display:        flex;
+    flex-direction: column;
+    padding:        0 0 20px;
+    }
+
+.character__creation {
+    width: 280px;
+    }
+
+.new-player__char {
+    display:       inline-block;
+    min-width:     100px;
+    margin-bottom: 5px;
+    }
 
 .button {
     background-color: lightgrey;
-    margin-right: 1px;
-    margin-left: 1px;
-}
+    margin-right:     1px;
+    margin-left:      1px;
+    }
 
 .selectedButton {
     background-color: cadetblue;
-}
+    }
 
 .container {
     position: relative;
-    width: 50%;
-}
+    width:    50%;
+    }
 
 .container img {
-    width: 100%;
+    width:  100%;
     height: auto;
-}
+    }
 
 .container .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
+    position:      absolute;
+    top:           50%;
+    left:          50%;
+    font-size:     16px;
+    padding:       12px 24px;
+    border:        none;
+    cursor:        pointer;
     border-radius: 5px;
-}
+    }
 
 .container .btn:hover {
     background-color: black;
-}
+    }
+
+.submit-button {
+    width:      100%;
+    height:     25px;
+    transition: ease-out .8s;
+    }
+
+.submit-button:hover {
+    background-color: #55e155;
+    }
