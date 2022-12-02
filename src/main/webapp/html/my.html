@@ -3,12 +3,22 @@
 <head>
     <title>RPG</title>
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
-    <link href="/css/my.css" rel="stylesheet" media="all">
+    <link href="/css/my.css" rel="stylesheet">
 </head>
 
 <body>
 
 <h1>RPG admin panel</h1>
+<div id='selector'>
+    <label for="accountsToBeShown">Number of accounts to be shown on page: </label>
+    <select id='accountsToBeShown'>
+        <option value='0'>3</option>
+        <option value='1'>5</option>
+        <option value='2'>10</option>
+        <option value='3'>20</option>
+    </select>
+</div>
+<br>
 <div id='table'>
     <table id='userTable'>
         <thead>
@@ -21,6 +31,8 @@
             <th>Level</th>
             <th>Birthday</th>
             <th>Banned</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody id="tableBody">
@@ -28,21 +40,61 @@
     </table>
 </div>
 <br>
-<div id='selector'>
-    <label for="accountsToBeShown">Number of accounts to be shown on page: </label>
-    <select id='accountsToBeShown'>
-        <option value='0'>3</option>
-        <option value='1'>5</option>
-        <option value='2'>10</option>
-        <option value='3'>20</option>
-    </select>
+<div id='paging'>
+    <button class="button">demo1</button>
+    <button class="selectedButton">demo2</button>
 </div>
 <br>
-<div id='paging'>
-    Pages:
+<br>
+<br>
+<div id='createPlayer'>
+    Create player:
+    <br><br>
+    <form>
+        Name: <label id="name">
+        <input type="text" minlength="1" maxlength="12">
+    </label><br>
+        Title: <label id="title">
+        <input type="text" minlength="1" maxlength="30">
+    </label><br>
+        Race: <label id="race">
+        <select>
+            <option>HUMAN</option>
+            <option>DWARF</option>
+            <option>ELF</option>
+            <option>GIANT</option>
+            <option>ORC</option>
+            <option>TROLL</option>
+            <option>HOBBIT</option>
+        </select>
+    </label><br>
+        Profession: <label id="profession">
+        <select>
+            <option>WARRIOR</option>
+            <option>ROGUE</option>
+            <option>SORCERER</option>
+            <option>CLERIC</option>
+            <option>PALADIN</option>
+            <option>NAZGUL</option>
+            <option>WARLOCK</option>
+            <option>DRUID</option>
+        </select>
+    </label><br>
+        Level: <label id="level">
+        <input type="number" min="0" max="100">
+    </label><br>
+        Birthday: <label id="birthday">
+        <input type="date">
+    </label><br>
+        Banned: <label id="banned">
+        <select>
+            <option>false</option>
+            <option>true</option>
+        </select>
+    </label><br>
+    </form><br>
+    <button id="createButton">Create</button>
 </div>
-
-<script type='text/javascript' src = '/html/getRequests.js'> </script>
-
 </body>
+<script type='text/javascript' src='/html/logic.js'></script>
 </html>
